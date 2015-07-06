@@ -1,3 +1,4 @@
-gvod/gvod/lib/*
+gvod/gvod/lib/*.jar
 gvod/skeleton
+sweep/sweep/lib/*.jar
 sweep/skeleton
