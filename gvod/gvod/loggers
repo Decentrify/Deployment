@@ -1,0 +1,17 @@
+    log4j.logger.Kompics: WARN
+    log4j.logger.se.sics.gvod.timer.java.JavaTimer: WARN
+    log4j.logger.se.sics.gvod.net: WARN
+    log4j.logger.se.sics.kompics.network.netty: WARN
+    log4j.logger.se.sics.kompics.network.netty.serialization: WARN
+    log4j.logger.io.netty: WARN
+    log4j.logger.com.barchart: WARN
+    log4j.logger.se.sics.gvod.system.HostManagerComp: INFO
+    log4j.logger.se.sics.gvod.bootstrap.client.BootstrapClientComp: INFO
+    log4j.logger.se.sics.gvod.bootstrap.server.BootstrapServerComp: INFO
+    log4j.logger.se.sics.gvod.bootstrap.cclient.CaracalPSManagerComp: INFO
+    log4j.logger.se.sics.gvod.bootstrap.cclient.CaracalPeerStoreComp: INFO
+    log4j.logger.se.sics.gvod.croupierfake.CroupierComp: INFO
+    log4j.logger.se.sics.gvod.core.VoDComp: INFO
+    log4j.logger.se.sics.gvod.core.connMngr.ConnMngrComp: INFO
+    log4j.logger.se.sics.gvod.core.downloadMngr.DownloadMngrComp: INFO
+    log4j.logger.se.sics.gvod.manager.VoDManager: INFO
