@@ -1,0 +1,5 @@
+USER=aaor
+HOST_FILE="hosts.conf"
+REMOTE_PATH=/home/aaor/caracaldb
+LOCAL_PATH=/home/aaor/caracaldb/remote/*
+BOOTSTRAP="cloud2.sics.se"
