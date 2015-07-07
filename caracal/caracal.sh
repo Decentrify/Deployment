@@ -34,7 +34,7 @@ function boot {
 }
 
 function shutdown {
-	parallel-ssh -h "${HOST_FILE}" -l ${USER} "cd $REMOTE_PATH; ./killall.sh"
+	parallel-ssh -h "${HOST_FILE}" -l ${USER} "cd $REMOTE_PATH; ./killall.sh; rm /tmp/libleveldbjni-64.so"
 	for s in $SERVERS; do
 		echo "Killed all the things on ${USER}@${s}:"
 	done
