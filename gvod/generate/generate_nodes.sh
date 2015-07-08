@@ -21,8 +21,8 @@ do
   mkdir ${NODE_DIR}
   mkdir ${NODE_DIR}/var
   mkdir ${NODE_DIR}/etc
+  mkdir ${NODE_DIR}/videos
   LIB_DIR=${REMOTE_GEN_DIR}/node${i}/videos
-  mkdir $LIB_DIR
   SELF_PORT=`expr ${SELF_START_PORT} + ${i} + ${i}`
   HTTP_PORT=`expr ${HTTP_START_PORT} + ${i} + ${i}`
   HTTP_ADMIN_PORT=`expr ${HTTP_START_PORT} + ${i} + ${i} + 1`
