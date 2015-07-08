@@ -25,5 +25,5 @@ do
   cp ${HOME_DIR}/sweep/bin/* ${HOME_DIR}/skeleton/sweep/bin
 
   ssh ${!M_USER}@${!MACHINE} "rm -rf ${!M_HOME}/sweep/*"
-  scp -r ${HOME_DIR}/skeleton/sweep ${!M_USER}@${!MACHINE}:${!M_HOME}/sweep
+  scp -r ${HOME_DIR}/skeleton/sweep ${!M_USER}@${!MACHINE}:${!M_HOME}
 done
