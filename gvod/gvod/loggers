@@ -15,3 +15,4 @@
     log4j.logger.se.sics.gvod.core.connMngr.ConnMngrComp: INFO
     log4j.logger.se.sics.gvod.core.downloadMngr.DownloadMngrComp: INFO
     log4j.logger.se.sics.gvod.manager.VoDManager: INFO
+    log4j.logger.se.sics.gvod.core.libraryMngr.LibraryMngr: INFO
