@@ -1,5 +1,5 @@
-USER=aaor
+USER=sweep
 HOST_FILE="hosts.conf"
-REMOTE_PATH=/home/aaor/caracaldb
-LOCAL_PATH=/home/aaor/caracaldb/remote/*
+REMOTE_PATH=/home/sweep/caracaldb
+LOCAL_PATH=/home/babbar/workspace/Deployment/caracal/remote/*
 BOOTSTRAP="cloud2.sics.se"
