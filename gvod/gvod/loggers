@@ -16,3 +16,5 @@
     se.sics.gvod.core.downloadMngr.DownloadMngrComp: INFO
     se.sics.gvod.manager.VoDManager: INFO
     se.sics.gvod.core.libraryMngr.LibraryMngr: INFO
+    se.sics.p2ptoolbox.videostream.VideoStreamMngrImpl: INFO
+    se.sics.p2ptoolbox.videostream.http.RangeCapableMp4Handler:INFO
