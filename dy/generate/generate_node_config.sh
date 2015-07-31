@@ -1,0 +1,38 @@
+#!/bin/bash
+echo "$0 $@"
+if [ $# -ne 7 ];
+    then echo "illegal number of parameters - expected 7: 1.localGenDir 2.configFile 3.selfSeed 4.selfIp 5.selfPort 6.vodLibDir 7.webserviceConfig"
+    exit 1
+fi
+
+source $2
+CONFIG_FILE=$1/application.conf
+touch ${CONFIG_FILE}
+
+echo "system.seed="$3 >> ${CONFIG_FILE}
+echo "system.self.ip=\""$4"\"" >> ${CONFIG_FILE}
+echo "system.self.port="$5 >> ${CONFIG_FILE}
+if [ $4 == ${BOOTSTRAP_IP} ] && [ $5 -eq ${BOOTSTRAP_PORT} ]; then
+    echo "system.self.id=0" >> ${CONFIG_FILE}
+fi
+
+echo "vod.address.ip=\""$4"\"" >> ${CONFIG_FILE}
+echo "vod.address.port="$5 >> ${CONFIG_FILE}
+if [ $4 == ${BOOTSTRAP_IP} ] && [ $5 -eq ${BOOTSTRAP_PORT} ]; then
+    echo "vod.address.id=0" >> ${CONFIG_FILE}
+fi
+echo "vod.libDir="$6 >> ${CONFIG_FILE}
+
+echo "system.bootstrap.nodes=[\"bootNode\"]" >> ${CONFIG_FILE}
+echo "system.bootstrap.bootNode.ip=\""${BOOTSTRAP_IP}"\"" >> ${CONFIG_FILE}
+echo "system.bootstrap.bootNode.port="${BOOTSTRAP_PORT} >> ${CONFIG_FILE}
+echo "system.bootstrap.bootNode.id=0" >> ${CONFIG_FILE}
+
+echo "system.aggregator.ip=\""${AGGREGATOR_IP}"\"" >> ${CONFIG_FILE}
+echo "system.aggregator.port="${AGGREGATOR_PORT} >> ${CONFIG_FILE}
+echo "system.aggregator.id="${AGGREGATOR_ID} >> ${CONFIG_FILE}
+
+echo "caracal.address.ip=\""${CARACAL_IP}"\"" >> ${CONFIG_FILE}
+echo "caracal.address.port="${CARACAL_PORT} >> ${CONFIG_FILE}
+
+echo "webservice.server=\""$7"\"" >> ${CONFIG_FILE}

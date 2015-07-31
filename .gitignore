@@ -2,3 +2,4 @@ gvod/gvod/lib/*.jar
 gvod/skeleton
 sweep/sweep/lib/*.jar
 sweep/skeleton
+dy/dy/lib/dy_ws.jar
