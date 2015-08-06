@@ -15,6 +15,7 @@ echo "system.self.port="$5 >> ${CONFIG_FILE}
 if [ $4 == ${BOOTSTRAP_IP} ] && [ $5 -eq ${BOOTSTRAP_PORT} ]; then
     echo "system.self.id=0" >> ${CONFIG_FILE}
 fi
+echo "system.sanityCheckPeriod=5000" >> ${CONFIG_FILE}
 
 echo "vod.address.ip=\""$4"\"" >> ${CONFIG_FILE}
 echo "vod.address.port="$5 >> ${CONFIG_FILE}
@@ -23,16 +24,26 @@ if [ $4 == ${BOOTSTRAP_IP} ] && [ $5 -eq ${BOOTSTRAP_PORT} ]; then
 fi
 echo "vod.libDir="$6 >> ${CONFIG_FILE}
 
-echo "system.bootstrap.nodes=[\"bootNode\"]" >> ${CONFIG_FILE}
-echo "system.bootstrap.bootNode.ip=\""${BOOTSTRAP_IP}"\"" >> ${CONFIG_FILE}
-echo "system.bootstrap.bootNode.port="${BOOTSTRAP_PORT} >> ${CONFIG_FILE}
-echo "system.bootstrap.bootNode.id=0" >> ${CONFIG_FILE}
-
 echo "system.aggregator.ip=\""${AGGREGATOR_IP}"\"" >> ${CONFIG_FILE}
 echo "system.aggregator.port="${AGGREGATOR_PORT} >> ${CONFIG_FILE}
 echo "system.aggregator.id="${AGGREGATOR_ID} >> ${CONFIG_FILE}
 
 echo "caracal.address.ip=\""${CARACAL_IP}"\"" >> ${CONFIG_FILE}
 echo "caracal.address.port="${CARACAL_PORT} >> ${CONFIG_FILE}
+
+echo "caracal-client.bootstrap.caracalTimeout = 1000" >> ${CONFIG_FILE}
+echo "caracal-client.bootstrap.size = 3" >> ${CONFIG_FILE} 
+echo "caracal-client.heartbeat.schemaName = \"gvod.heartbeat\"" >> ${CONFIG_FILE}
+echo "caracal-client.heartbeat.period = 2000" >> ${CONFIG_FILE}
+echo "caracal-client.heartbeat.size = 10" >> ${CONFIG_FILE}
+
+echo "vod.video.pieceSize=1024" >> ${CONFIG_FILE}
+echo "vod.video.piecesPerBlock=1024" >> ${CONFIG_FILE}
+echo "vod.video.startPieces=100" >> ${CONFIG_FILE}
+echo "vod.video.descriptorUpdate=1000" >> ${CONFIG_FILE}
+echo "vod.connection.reqTimeoutPeriod=1000" >> ${CONFIG_FILE}
+echo "vod.connection.maxPipeline=100" >> ${CONFIG_FILE}
+echo "vod.connection.updatePeriod=1000" >> ${CONFIG_FILE}
+echo "vod.hashAlg=\"SHA\"" >> ${CONFIG_FILE}
 
 echo "webservice.server=\""$7"\"" >> ${CONFIG_FILE}
