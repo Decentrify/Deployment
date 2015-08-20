@@ -15,7 +15,7 @@ echo "system.self.port="$5 >> ${CONFIG_FILE}
 if [ $4 == ${BOOTSTRAP_IP} ] && [ $5 -eq ${BOOTSTRAP_PORT} ]; then
     echo "system.self.id=0" >> ${CONFIG_FILE}
 fi
-echo "system.sanityCheckPeriod=5000" >> ${CONFIG_FILE}
+echo "system.sanityCheckPeriod=30000" >> ${CONFIG_FILE}
 
 echo "vod.address.ip=\""$4"\"" >> ${CONFIG_FILE}
 echo "vod.address.port="$5 >> ${CONFIG_FILE}
