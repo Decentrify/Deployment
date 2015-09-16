@@ -45,3 +45,7 @@ SS1_ID=-1
 SS2_NAME="cloud2"
 SS2_IP=$MACHINE2
 SS2_ID=-2
+
+#temporary - should get this from caracal eventually
+GC_BOOT_IP=$BOOTSTRAP_IP
+GC_BOOT_PORT=$BOOTSTRAP_PORT

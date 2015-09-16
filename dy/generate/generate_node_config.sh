@@ -61,3 +61,8 @@ echo "stun.server."${SS2_NAME}".ip=\""${SS2_IP}"\"" >> ${CONFIG_FILE}
 echo "stun.server."${SS2_NAME}".port1="${SS_DEFAULT_PORT1} >> ${CONFIG_FILE}
 echo "stun.server."${SS2_NAME}".port2="${SS_DEFAULT_PORT2} >> ${CONFIG_FILE}
 echo "stun.server."${SS2_NAME}".id="${SS2_ID} >> ${CONFIG_FILE}
+
+echo "croupier.global.bootstrap.list=[\"gc\"]" >> ${CONFIG_FILE}
+echo "croupier.global.bootstrap.gc.ip=\""${GC_BOOT_IP}"\"" >> ${CONFIG_FILE}
+echo "croupier.global.bootstrap.gc.port="${GC_BOOT_PORT} >> ${CONFIG_FILE}
+echo "croupier.global.bootstrap.gc.id=0" >> ${CONFIG_FILE}
