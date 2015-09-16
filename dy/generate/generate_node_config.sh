@@ -47,3 +47,17 @@ echo "vod.connection.updatePeriod=1000" >> ${CONFIG_FILE}
 echo "vod.hashAlg=\"SHA\"" >> ${CONFIG_FILE}
 
 echo "webservice.server=\""$7"\"" >> ${CONFIG_FILE}
+
+echo "croupier.global.overlayId="${GLOBAL_CROUPIER_ID} >> ${CONFIG_FILE}
+
+echo "stun.client.port1"=${SC_DEFAULT_PORT1} >> ${CONFIG_FILE}
+echo "stun.client.port2"=${SC_DEFAULT_PORT2} >> ${CONFIG_FILE}
+echo "stun.server.list=[\""${SS1_NAME}"\",\""${SS2_NAME}"\"]" >> ${CONFIG_FILE}
+echo "stun.server."${SS1_NAME}".ip=\""${SS1_IP}"\"" >> ${CONFIG_FILE}
+echo "stun.server."${SS1_NAME}".port1="${SS_DEFAULT_PORT1} >> ${CONFIG_FILE}
+echo "stun.server."${SS1_NAME}".port2="${SS_DEFAULT_PORT2} >> ${CONFIG_FILE}
+echo "stun.server."${SS1_NAME}".id="${SS1_ID} >> ${CONFIG_FILE}
+echo "stun.server."${SS2_NAME}".ip=\""${SS2_IP}"\"" >> ${CONFIG_FILE}
+echo "stun.server."${SS2_NAME}".port1="${SS_DEFAULT_PORT1} >> ${CONFIG_FILE}
+echo "stun.server."${SS2_NAME}".port2="${SS_DEFAULT_PORT2} >> ${CONFIG_FILE}
+echo "stun.server."${SS2_NAME}".id="${SS2_ID} >> ${CONFIG_FILE}
