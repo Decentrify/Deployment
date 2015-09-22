@@ -8,4 +8,5 @@ fi
 mkdir $1/dy
 mkdir $1/dy/bin
 mkdir $1/dy/lib
+mkdir $1/dy/etc
 mkdir $1/dy/nodes

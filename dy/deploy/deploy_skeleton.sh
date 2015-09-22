@@ -25,6 +25,7 @@ do
   ${HOME_DIR}/generate/generate_machine.sh ${HOME_DIR}/generate ${HOME_DIR}/skeleton ${!M_HOME} ${!M_NODES} ${HOME_DIR}/config ${LOGGERS} ${!MACHINE} ${!M_PORT} ${!M_HTTP_PORT} ${M_SEED} 
 
   cp ${HOME_DIR}/dy/bin/* ${HOME_DIR}/skeleton/dy/bin
+  cp ${HOME_DIR}/dy/etc/* ${HOME_DIR}/skeleton/dy/etc
 
   ssh ${!M_USER}@${!MACHINE} "rm -rf ${!M_HOME}/dy/*"
   scp -r ${HOME_DIR}/skeleton/dy ${!M_USER}@${!MACHINE}:${!M_HOME}
